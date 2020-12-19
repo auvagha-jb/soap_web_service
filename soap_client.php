@@ -3,11 +3,14 @@ require_once('nusoap.php');
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
+require_once('server.php');
+
+$server = url_origin( $_SERVER );
 
 $error  = '';
 $result = array();	
 $response = '';
-$wsdl = "http://localhost/soap-web-services-template/soap_server.php?wsdl";
+$wsdl = $server['base_url'].$server['directory']."/soap_server.php?wsdl";
 
 // create client object
 $client = new nusoap_client($wsdl);
