@@ -115,6 +115,7 @@ if(isset($_POST['addbtn'])){
         </div>
         <br />
         <h3>Results</h3>
+
         <table class="table">
             <thead>
                 <tr>
@@ -127,7 +128,7 @@ if(isset($_POST['addbtn'])){
                 </tr>
             </thead>
             <tbody>
-                <?php if($result){ ?>
+                <?php if($result):?>
                 <tr>
                     <td><?php echo $result->student_name; ?></td>
                     <td><?php echo $result->admission; ?></td>
@@ -136,12 +137,11 @@ if(isset($_POST['addbtn'])){
                     <td><?php echo $result->number; ?></td>
                     <td><?php echo $result->entry_points; ?></td>
                 </tr>
-                <?php 
-  		}else{ ?>
+                <?php else:?>
                 <tr>
                     <td colspan='5'>Data does not exist</td>
                 </tr>
-                <?php } ?>
+                <?php endif; ?>
             </tbody>
         </table>
 
