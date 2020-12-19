@@ -23,5 +23,5 @@ function url_origin( $s, $use_forwarded_host = false )
 // $server = url_origin( $_SERVER );
 // $wsdl = $server['base_url']."/".$server['directory']."/soap_server.php?wsdl";
 
-print_r($server);
-echo $wsdl;
+// print_r($server);
+// echo $wsdl;
